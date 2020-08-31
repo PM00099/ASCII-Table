@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCii Table</title>
+
+    <!-- CSS Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,300;1,900&display=swap" rel="stylesheet">
+
+    <!-- Stle.css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+
+    </div>
+
+    <script>
+        let content = "";
+        for(let i=33;i<127;i++){
+            content+= `
+            <div class="box">
+                <h1>${String.fromCharCode(i)}</h1>
+                <div>
+                    <h4>Hex </h4>
+                    <p>${i.toString(16)}</p>
+                    </div>
+                <div>
+                    <h4>Octal</h4>
+                    <p>${i.toString(8)}</p>
+                    </div>
+                <div>
+                    <h4>Binary</h4>
+                    <p>${i.toString(2)}</p>
+                    </div>
+                </div>
+            `;
+        }
+        document.querySelector(".wrapper").innerHTML = content;
+    </script>
+</body>
+</html>
